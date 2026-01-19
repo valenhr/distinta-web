@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { ShoppingCart, Menu, X, Package } from "lucide-react"
+import Image from "next/image"
+import { ShoppingCart, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 export function Navbar() {
@@ -18,15 +19,20 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-28">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <Package className="h-8 w-8 text-accent" />
-            <span className="text-xl font-bold">PackPro</span>
+            <Image
+              src="/logo-distinta.png"
+              alt="Distinta logo"
+              width={2080}
+              height={1149}
+              className="w-auto h-12 sm:h-16 md:h-20 lg:h-24 object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+         <div className="hidden md:flex items-center gap-8 ml-auto">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
