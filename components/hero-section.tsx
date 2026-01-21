@@ -11,7 +11,7 @@ export function HeroSection() {
           alt="Empaques de comida y bolsas personalizadas"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/65"></div>
+        <div className="absolute inset-0 bg-black/76"></div>
       </div>
 
       {/* Content */}
@@ -20,8 +20,7 @@ export function HeroSection() {
           Empaques que <span className="text-accent">destacan</span> tu marca
         </h1>
         <p className="text-lg md:text-xl text-primary-foreground/80 leading-relaxed max-w-xl">
-          Diseñamos y fabricamos empaques para comida y bolsas para ropa de alta calidad. Personaliza tus productos
-          con tu marca y déjanos impresionar a tus clientes.
+          Empaques genéricos y personalizados, únicos y biodegradables, dale un toque distinto a tus cajas, bolsas y papeles.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
           <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">

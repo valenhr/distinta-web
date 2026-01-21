@@ -27,11 +27,13 @@
   --muted-foreground: #035a8a;
 
   /* Accent - Turquesa (10%) */
-  --accent: #25d9d9;
+  --accent: #77bf56;
+
   --accent-foreground: #024873;
 
   /* Greens para destacados */
-  --success: #73bf78;
+  --success:  #77bf56;
+;
   --success-light: #77bf56;
 
   --destructive: oklch(0.577 0.245 27.325);
@@ -39,7 +41,8 @@
 
   --border: #b8dce3;
   --input: #b8dce3;
-  --ring: #25d9d9;
+  --ring:  #77bf56;
+
 
   --chart-1: #024873;
   --chart-2: #25d9d9;
@@ -51,12 +54,14 @@
 
   --sidebar: #024873;
   --sidebar-foreground: #dceef2;
-  --sidebar-primary: #25d9d9;
+  --sidebar-primary : #77bf56;
+
   --sidebar-primary-foreground: #024873;
   --sidebar-accent: #035a8a;
   --sidebar-accent-foreground: #dceef2;
   --sidebar-border: #035a8a;
-  --sidebar-ring: #25d9d9;
+  --sidebar-ring: #77bf56;
+
 }
 
 @theme inline {
