@@ -17,7 +17,7 @@ export function Navbar() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-primary text-primary-foreground">
+    <nav className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: '#dceef2', color: '#024873' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
@@ -28,6 +28,7 @@ export function Navbar() {
               width={2080}
               height={1149}
               className="w-auto h-5 sm:h-10 md:h-10 lg:h-14 object-contain"
+              style={{ filter: 'invert(1) hue-rotate(200deg) saturate(1.2) brightness(0.9)' }}
             />
           </Link>
 
@@ -69,7 +70,7 @@ export function Navbar() {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-primary border-t border-primary-foreground/10">
+        <div className="md:hidden border-t" style={{ backgroundColor: '#dceef2', borderColor: '#024873' }}>
           <div className="px-4 py-4 space-y-3">
             {navLinks.map((link) => (
               <Link
