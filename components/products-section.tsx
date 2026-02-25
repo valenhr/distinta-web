@@ -1,15 +1,50 @@
 "use client"
 
+import { useEffect, useRef } from "react"
+import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+
+gsap.registerPlugin(ScrollTrigger)
 export function ProductsSection() {
+    const titleRef = useRef(null)
+  const textRef = useRef(null)
+
+  useEffect(() => {
+    gsap.from(titleRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#productos",
+        start: "top 80%",
+        once: true
+      }
+    })
+
+    gsap.from(textRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      delay: 0.3,
+      scrollTrigger: {
+        trigger: "#productos",
+        start: "top 80%",
+        once: true
+      }
+    })
+  }, [])
+
   return (
     <section id="productos">
       {/* Header verde */}
       <div className="bg-[#dceef2] pt-7 pb-12 w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-6xl font-extrabold text-[#024873] leading-tight mb-2">
+          <h2 ref={titleRef} className="text-5xl font-extrabold text-[#024873] leading-tight ">
             Nuestros Productos
           </h2>
-          <p className="text-[#035a8a] font-light text-2xl max-w-2xl mx-auto mb-6">
+          <p ref={textRef} className="text-[#035a8a] font-light text-2xl max-w-2xl mx-auto mb-6">
             Explora nuestra amplia gama de empaques y bolsas personalizadas para tu negocio
           </p>
         </div>
